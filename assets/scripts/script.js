@@ -2,22 +2,19 @@
 var generateBtn = document.querySelector("#generate");
 
 // Write password to the #password input
-function generatePassword(){
-console.log(generatePasswordw);
-}
+// function generatePassword(){
 
-function writePassword() {
-  console.log(writePassword)
-  var password = generatePassword();
+// }
 
-  console.log(password);
-  var passwordText = document.querySelector("#password");
+// function writePassword() {
 
-  console.log(passwordText);
+//   var password = generatePassword();
 
-  passwordText.value = password;
+//   var passwordText = document.querySelector("#password");
 
-}
+//   passwordText.value = password;
+
+// }
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
@@ -27,7 +24,8 @@ generateBtn.addEventListener("click", writePassword);
     var capLetter = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
     var number = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
     var symbol = ["!", "#", "$", "%", "&", "(", ")", "*", "+", ",", "-", ".", "/", ":", ";", "<", "=", ">", "?", "@", "^", "[", "]", "^", "_", "{", "|", "}", "~"];
-
+    var criteria = [];
+    var endResult = "";
 //What happens when you press button ------!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!-------
 // document.querySelector("#generate").addEventListener("click", startFunction)
 //   // var passLength = prompt("please enter length you would like your password.")
@@ -35,54 +33,68 @@ generateBtn.addEventListener("click", writePassword);
 //    var passlength = prompt("Please enter length you would like your password.");
 //   }  
 
-window.onload = ("hello and welcome")
+function generatePassword(){
 
-// FIRST PROMPT
-  var criteria = [];
-  var endResult= "";
-  console.log(criteria)
+
+  // The length user wants the password
   var passLength = prompt("please enter length you would like your password.")
 
+
+// if the password length is short or too long then...
   if (passLength < 8 || passLength > 128){
-    alert("Please choose a length greater than 8 characters, but less than 128 characters.");
+    alert("Please choose a length greater than 8 characters, but less than 128 characters; or enter number.");
   }
-   // the rest of the statments
-  else{
-
+   // Otherwise if, passLength is correct then...
+  else if (passLength > 8 || passLength < 128){
     if(confirm("Include upper-case letters?")){
-      Array.prototype.push.apply(criteria, capLetter);
-      // criteria.push(capLetter)
-    }
-
-    if(confirm("Include lower-case letters?")){
       Array.prototype.push.apply(criteria, letter);
-      criteria.push(letter)
+      // console.log(criteria)
     }
-
+    if(confirm("Include lower-case letters?")){
+      Array.prototype.push.apply(criteria, capLetter);
+      // console.log(criteria)
+    }
     if(confirm("Include numbers?")){
       Array.prototype.push.apply(criteria, number);
-      // criteria.push(number)
+      // console.log(criteria)
     }
-
     if(confirm("Include symbols?")){
       Array.prototype.push.apply(criteria, symbol);
-      // criteria.push(symbol)
+      // console.log(criteria)
     }
-    
-    if(criteria == 0 || criteria == null){
-      alert("--Invalid-- Criteria needed to generate password")
-    }
+  }
+//If nothing added to criteria then...
+  if(criteria == null || criteria == 0){
+    alert("--Invalid-- Criteria needed to generate password")
+  }
 
-    else{
+  //the math to randomize the items in criteria array
+    console.log(criteria)
+
+    
       for(var i = 0; i < passLength; i++){
-        var rand = Math.floor(Math.random() * criteria.length);
-         endResult += criteria[rand];
+        var rand = Math.floor(Math.random() * criteria.length)
+        console.log(criteria[rand])
+        endResult += criteria[rand];
         console.log(endResult)
       }
+      return endResult
+    
     }
 
+    function writePassword() {
 
-  }
+      var password = generatePassword();
+    
+      var passwordText = document.querySelector("#password");
+    
+      passwordText.value = password;
+    
+    }
+// / Questions for class: how do I get my criteria to loop through the items in the arrays not the arrays themselves?
+// how can I get my end result variable to have the end password??
+
+  // }
   
  
 
