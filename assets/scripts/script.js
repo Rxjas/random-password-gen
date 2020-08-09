@@ -41,7 +41,7 @@ function generatePassword(){
   var passLength = prompt("please enter length you would like your password.")
 
 
-// if the password length is short or too long then...
+  // if the password length is short or too long then...
   if (passLength < 8 || passLength > 128){
     alert("Please choose a length greater than 8 characters, but less than 128 characters; or enter number.");
   }
@@ -64,7 +64,7 @@ function generatePassword(){
       // console.log(criteria)
     }
   }
-//If nothing added to criteria then...
+  //If nothing added to criteria then...
   if(criteria == null || criteria == 0){
     alert("--Invalid-- Criteria needed to generate password")
   }
@@ -93,10 +93,6 @@ function generatePassword(){
       passwordText.value = password;
     
     }
-// / Questions for class: how do I get my criteria to loop through the items in the arrays not the arrays themselves?
-// how can I get my end result variable to have the end password??
-
-  // }
   
  
 
