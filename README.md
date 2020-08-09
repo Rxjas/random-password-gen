@@ -24,5 +24,5 @@ https://rxjas.github.io/random-password-gen/
 
 * https://www.tutorialsteacher.com/javascript/javascript-operators
 
-
+* https://www.youtube.com/watch?v=J3MIQTxV8-c&t=275s
 
