@@ -18,11 +18,11 @@ https://rxjas.github.io/random-password-gen/
 
 * https://www.w3schools.com/js/js_loop_for.asp
 
-*https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Logical_AND
+* https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Logical_AND
 
-*https://stackoverflow.com/questions/50840293/setting-a-variable-equal-to-another-variable
+* https://stackoverflow.com/questions/50840293/setting-a-variable-equal-to-another-variable
 
-*https://www.tutorialsteacher.com/javascript/javascript-operators
+* https://www.tutorialsteacher.com/javascript/javascript-operators
 
 
 
