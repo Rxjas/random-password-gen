@@ -1,21 +1,6 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 
-// Write password to the #password input
-// function generatePassword(){
-
-// }
-
-// function writePassword() {
-
-//   var password = generatePassword();
-
-//   var passwordText = document.querySelector("#password");
-
-//   passwordText.value = password;
-
-// }
-
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
 
@@ -26,16 +11,10 @@ generateBtn.addEventListener("click", writePassword);
     var number = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
     var symbol = ["!", "#", "$", "%", "&", "(", ")", "*", "+", ",", "-", ".", "/", ":", ";", "<", "=", ">", "?", "@", "^", "[", "]", "^", "_", "{", "|", "}", "~"];
     var endResult = "";
-    
-//What happens when you press button ------!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!-------
-// document.querySelector("#generate").addEventListener("click", startFunction)
-//   // var passLength = prompt("please enter length you would like your password.")
-//   function startFunction(){
-//    var passlength = prompt("Please enter length you would like your password.");
-//   }  
+
 
 function generatePassword(){
-
+  
 
   // The length user wants the password
   var passLength = prompt("please enter length you would like your password.")
@@ -79,7 +58,7 @@ function generatePassword(){
         endResult += criteria[rand];
         // console.log(endResult)
       }
-      //returm put outside loop since it stops the loop once it reaches it
+      //return put outside loop since it stops the loop once it reaches it
       return endResult
     
     }
