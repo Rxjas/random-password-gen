@@ -15,6 +15,7 @@ generateBtn.addEventListener("click", writePassword);
 
 function generatePassword(){
   // Empty the result everytime the function is ran to not just add to previous one. 
+  criteria = [];
   var endResult = "";
 
   // The length user wants the password
@@ -28,11 +29,11 @@ function generatePassword(){
    // Otherwise if, passLength is correct then...
   else {
     if(confirm("Include upper-case letters?")){
-      Array.prototype.push.apply(letter);
+      Array.prototype.push.apply(criteria, capLetter);
       // console.log(criteria)
     }
     if(confirm("Include lower-case letters?")){
-      Array.prototype.push.apply(criteria, capLetter);
+      Array.prototype.push.apply(criteria, letter);
       // console.log(criteria)
     }
     if(confirm("Include numbers?")){
@@ -46,7 +47,8 @@ function generatePassword(){
   }
   //If nothing added to criteria then...
   if(criteria == null || criteria == 0){
-    criteria.push(null)
+    criteria.push(null);
+    criteria.filter(e => e !== '');
     alert("--Invalid-- Criteria needed to generate password")
   }
 
