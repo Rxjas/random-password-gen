@@ -47,9 +47,8 @@ function generatePassword(){
   }
   //If nothing added to criteria then...
   if(criteria == null || criteria == 0){
-    criteria.push(null);
-    criteria.filter(e => e !== '');
     alert("--Invalid-- Criteria needed to generate password")
+    return endResult = '';
   }
 
   //the math to randomize the items in criteria array
