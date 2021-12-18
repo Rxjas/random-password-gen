@@ -1,4 +1,3 @@
-
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 
@@ -30,19 +29,15 @@ function generatePassword(){
   else {
     if(confirm("Include upper-case letters?")){
       Array.prototype.push.apply(criteria, capLetter);
-      // console.log(criteria)
     }
     if(confirm("Include lower-case letters?")){
       Array.prototype.push.apply(criteria, letter);
-      // console.log(criteria)
     }
     if(confirm("Include numbers?")){
       Array.prototype.push.apply(criteria, number);
-      // console.log(criteria)
     }
     if(confirm("Include symbols?")){
       Array.prototype.push.apply(criteria, symbol);
-      // console.log(criteria)
     }
   }
   //If nothing added to criteria then...
@@ -52,30 +47,20 @@ function generatePassword(){
   }
 
   //the math to randomize the items in criteria array
-    console.log(criteria)
-
-    
       for(var i = 0; i < passLength; i++){
-        var rand = Math.floor(Math.random() * criteria.length)
-        // console.log(criteria[rand])
+        var rand = Math.floor(Math.random() * criteria.length);
         endResult += criteria[rand];
-        // console.log(endResult)
       }
       //return put outside loop since it stops the loop once it reaches it
-      return endResult
-    
-    }
+      return endResult;
+    };
     
     // Function that runs when button is pressed
     function writePassword() {
-
       var password = generatePassword();
-    
-      var passwordText = document.querySelector("#password");
-    
+      var passwordText = document.querySelector("#password"); 
       passwordText.value = password;
-    
-    }
+    };
   
  
 
