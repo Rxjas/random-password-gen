@@ -41,7 +41,7 @@ function generatePassword(){
     }
   }
   //If nothing added to criteria then...
-  if(criteria == null || criteria == 0){
+  if(criteria[0] == null || 0){
     alert("--Invalid-- Criteria needed to generate password")
     return endResult = '';
   }
